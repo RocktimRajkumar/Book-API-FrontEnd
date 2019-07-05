@@ -21,4 +21,11 @@ export class BookService {
     return Observable.throw(error);
   }
 
+  addBook(book: Book){
+    let body = JSON.stringify(book);
+    let headers = new Headers({'Content-Type': 'application/json'});
+    let options = new RequestOptions({headers : headers});
+    return this._httpService.post("http://localhost:8082/BookAPI/api/book",body,options);
+  }
+
 }
