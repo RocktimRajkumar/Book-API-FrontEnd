@@ -1,1 +1,19 @@
 <h1>Welcome to book API</h1>
+
+<div>
+    <table class="table table-bordered">
+        <tr>
+            <td>ID</td>
+            <td>Title</td>
+            <td>Author</td>
+            <td>Actions</td>
+        </tr>
+
+        <tr *ngFor="let book of books">
+            <td>{{book.id}}</td>
+            <td>{{book.title}}</td>
+            <td>{{book.author}}</td>
+            <td>Edit | Delete</td>
+        </tr>
+    </table>
+</div>
