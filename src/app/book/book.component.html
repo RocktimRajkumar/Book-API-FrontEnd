@@ -1,34 +1,39 @@
-<h1 class="text-center">Welcome to book API</h1>
+<div class="container">
+    <h1 class="text-center"><em>Welcome to book API</em></h1>
 
-<div>
-    <form class="form-inline">
-        <div class="form-group">
-            <label for="title"><b>Book Title</b></label>
-            <input type="text" [(ngModel)]="book.title" class="form-control" name="title" id="title" placeholder="Enter book Title" />
-        </div>
-        <div class="form-group">
-            <label for="author"><b>Book Author</b></label>
-            <input type="text" [(ngModel)]="book.author" class="form-control" name="author" id="author" placeholder="Enter book Author" />
-        </div>
-        <button class="btn btn-success" (click)="addBook()">Add Book</button>
+    <div>
+        <form class="form-inline justify-content-center">
+            <div class="form-group">
+                <label for="title"><b>Book Title</b></label>
+                <input type="text" [(ngModel)]="book.title" class="form-control" name="title" id="title"
+                    placeholder="Enter book Title" />
+            </div>
+            <div class="form-group">
+                <label for="author"><b>Book Author</b></label>
+                <input type="text" [(ngModel)]="book.author" class="form-control" name="author" id="author"
+                    placeholder="Enter book Author" />
+            </div>
+            <button class="btn btn-success" (click)="addBook()">Add Book</button>
 
-    </form>
-</div>
+        </form>
+    </div>
+    <br>
+    <div>
+        <table class="table table-bordered table-striped">
+            <tr class="bg-info">
+                <th>ID</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Actions</th>
+            </tr>
 
-<div>
-    <table class="table table-bordered table-striped">
-        <tr class="bg-info">
-            <th>ID</th>
-            <th>Title</th>
-            <th>Author</th>
-            <th>Actions</th>
-        </tr>
-
-        <tr *ngFor="let book of books">
-            <td>{{book.id}}</td>
-            <td>{{book.title}}</td>
-            <td>{{book.author}}</td>
-            <td><button class="btn btn-secondary" (click)="getBookById(book.id)">Update</button> | <button class="btn btn-danger" (click)="deleteBook(book.id)">Delete</button></td>
-        </tr>
-    </table>
+            <tr *ngFor="let book of books">
+                <td>{{book.id}}</td>
+                <td>{{book.title}}</td>
+                <td>{{book.author}}</td>
+                <td><button class="btn btn-secondary" (click)="getBookById(book.id)">Update</button> | <button
+                        class="btn btn-danger" (click)="deleteBook(book.id)">Delete</button></td>
+            </tr>
+        </table>
+    </div>
 </div>
