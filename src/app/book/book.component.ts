@@ -51,6 +51,17 @@ export class BookComponent implements OnInit {
       });
   }
 
+  getBookById(bookId: String) {
+    this._bookService.getBookById(bookId)
+      .subscribe((bookData)=>{
+        console.log(bookData);
+        this.book=bookData;
+        this.getBooks();
+      },(error)=>{
+        console.log(error);
+      });
+  }
+
   ngOnInit(): void {
     this.getBooks();
   }
