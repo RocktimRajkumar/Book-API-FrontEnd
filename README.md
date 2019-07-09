@@ -1,27 +1,41 @@
-# BookAPI
+# &#x1F4D8; Book APP
+**&#x1F534; Angular 7** is one of the Most Popular Front End Web Framework on the internet, Spring MVC is also one of the Most Popular Application Framework on the internet, So let’s combine/integrate these two frameworks and build a simple CRUD application.  
+The goal of the application is to display the list of books, adding a new book, updating the existing book and deleting a book.  
+I will use Angular 7 in the front end for building forms, displaying the records and making an HTTP calls.  
+In the backend, using Spring REST i will perform the CRUD operations.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.7.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Steps to Setup
 
-## Code scaffolding
+**1. Clone the application**
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```bash
+git clone https://github.com/RocktimRajkumar/Book-API-FrontEnd.git
+```
 
-## Build
+**2. Intall Angular CLI globally**
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```bash
+npm install -g @angular/cli@7.3.7
+```
 
-## Running unit tests
+**3. Intall dependencies/npm modules**
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Go to the project directory and execute the following command from the terminal
 
-## Running end-to-end tests
+```bash
+intall npm
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+**4. Change the REST API URL's**
 
-## Further help
+In the book.service.ts change the REST API URL's, i have created backend project using Spring REST, you can find it here <[https://github.com/RocktimRajkumar/Book-API](https://github.com/RocktimRajkumar/Book-API)>
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+**5. Build and run the app**
+
+```bash
+ng serve --open
+```
+
+The app will open in the default browser with <http://localhost:4200/>.
