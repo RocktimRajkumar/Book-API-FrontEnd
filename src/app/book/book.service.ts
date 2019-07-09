@@ -28,4 +28,9 @@ export class BookService {
     return this._httpService.post("http://localhost:8082/BookAPI/api/book",body,options);
   }
 
+  deleteBook(bookId: String){
+    return this._httpService.delete("http://localhost:8082/BookAPI/api/book/"+bookId);
+    
+  }
+
 }

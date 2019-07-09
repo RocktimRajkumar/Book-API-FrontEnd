@@ -17,7 +17,7 @@ export class BookComponent implements OnInit {
   getBooks(): void {
     this._bookService.getAllBooks()
       .subscribe((bookData) => {
-      this.books = bookData;
+        this.books = bookData;
         console.log(bookData)
       }, (error) => {
         console.log(error);
@@ -39,6 +39,16 @@ export class BookComponent implements OnInit {
     this.book.id = null;
     this.book.author = null;
     this.book.title = null;
+  }
+
+  deleteBook(bookId: String) {
+    this._bookService.deleteBook(bookId)
+      .subscribe((response) => {
+        console.log(response);
+        this.getBooks();
+      }, (error) => {
+        console.log(error);
+      });
   }
 
   ngOnInit(): void {
