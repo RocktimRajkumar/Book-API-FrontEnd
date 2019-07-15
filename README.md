@@ -25,7 +25,7 @@ npm install -g @angular/cli@7.3.7
 Go to the project directory and execute the following command from the terminal
 
 ```bash
-intall npm
+npm install
 ```
 
 **4. Change the REST API URL's**
